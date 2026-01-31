@@ -1,16 +1,15 @@
-package tests.K04_WebDriverOlusturmaVeKullanma.D01_WebDriverOlusturma_GetveNavigateMethodlari;
+package tests;
 
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import utilities.DriverFactory;
 
-public class C01_WebDriverTest {
+public class WebDriverTest {
 
     @Test
-    public void googleTest() {
+    void googleTest() {
         WebDriver driver = DriverFactory.createChromeDriver();
         driver.get("https://www.google.com");
         driver.quit();
     }
 }
-
