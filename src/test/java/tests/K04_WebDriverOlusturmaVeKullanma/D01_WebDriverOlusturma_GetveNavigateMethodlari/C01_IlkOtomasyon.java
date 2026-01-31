@@ -1,4 +1,4 @@
-package tests.K04_WebDriverlusturmaVeKullanma.D01_WebDriverOlusturma_GetveNavigateMethodlari;
+package tests.K04_WebDriverOlusturmaVeKullanma.D01_WebDriverOlusturma_GetveNavigateMethodlari;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
