@@ -80,7 +80,6 @@ public class C03_WebAppTesti {
         } else System.out.println("Baslik Sayisi Testi FAILED");
 
 
-
         //Sayfayi kapatin
 
         driver.quit();

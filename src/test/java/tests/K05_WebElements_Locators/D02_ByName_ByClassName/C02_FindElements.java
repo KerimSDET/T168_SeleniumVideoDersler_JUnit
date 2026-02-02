@@ -50,7 +50,7 @@ public class C02_FindElements {
 
         // 5- Categort isimlerini yazdirin
 
-        //System.out.println(categoriElementleriList);  //istediğimiz veriyi vermiyor
+        //System.out.println(categoriElementleriList);  //istediğimiz veriyi vermiyor referansları yazdırdı
 
         for (int i = 0; i < categoriElementleriList.size(); i++) {
 

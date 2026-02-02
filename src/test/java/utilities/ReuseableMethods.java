@@ -7,7 +7,7 @@ public class ReuseableMethods {
             Thread.sleep(saniye * 1000);
 
         } catch (InterruptedException e) {
-            System.out.println("Thread was interrupted");;
+            System.out.println("Thread.sleep was interrupted");;
         }
         }
 }

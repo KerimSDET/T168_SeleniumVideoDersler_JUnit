@@ -49,11 +49,9 @@ public class C01_RelativeLocators {
 
         dslrCamera2.click();
 
-        dslrCameraIsimElementi  = driver.findElement(By.xpath("//div [@class=' heading-sm mb-4']"));
+        dslrCameraIsimElementi  = driver.findElement(By.xpath("//div [@class=' heading-sm mb-4']")); //locte yeniden tanımladık
         expectedUrunIsmi = "DSLR Camera";
         actualUrunIsmi =  dslrCameraIsimElementi.getText();
-
-
 
         if (expectedUrunIsmi.equals(actualUrunIsmi)) {
             System.out.println("DSLR Camera testi2 PASSED");
@@ -75,11 +73,6 @@ public class C01_RelativeLocators {
         if (expectedUrunIsmi.equals(actualUrunIsmi)) {
             System.out.println("DSLR Camera testi3 PASSED");
         } else System.out.println("DSLR Camera testi3 FAILED");
-
-
-
-
-
 
 
         driver.quit();

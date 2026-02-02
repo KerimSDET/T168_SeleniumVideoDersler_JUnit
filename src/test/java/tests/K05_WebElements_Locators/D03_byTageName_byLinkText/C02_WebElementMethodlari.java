@@ -21,7 +21,7 @@ public class C02_WebElementMethodlari {
         //cinsiyet bolumunden size uygun radio button secin
 
         WebElement erkekRadioButton = driver.findElement(By.id("inlineRadio2"));
-        WebElement kadinRadiButton = driver.findElement(By.id("inlineRadio1"));
+        WebElement kadinRadioButton = driver.findElement(By.id("inlineRadio1"));
         WebElement digerRadioButton = driver.findElement(By.id("inlineRadio3"));
 
         erkekRadioButton.click();
@@ -34,7 +34,7 @@ public class C02_WebElementMethodlari {
 
         //kadin radio butonu secili olmadigini test edin.
 
-        if (!kadinRadiButton.isSelected()) {
+        if (!kadinRadioButton.isSelected()) {
             System.out.println("Seçmediğimiz Radio Button1 Testi PASSED");
         } else System.out.println("Seçmediğimiz Radio Button1 Testi FAILED");
 

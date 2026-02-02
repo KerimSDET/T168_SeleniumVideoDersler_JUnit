@@ -35,7 +35,7 @@ public class C01_Xpath {
 
         // "Add/Remove Elements" yazisinin gorunur oldugunu test edin
 
-        WebElement addRemoveYaziElementi = driver.findElement(By.tagName("h2")); //tagname hali
+        //WebElement addRemoveYaziElementi = driver.findElement(By.tagName("h2")); //tagname hali
 
         WebElement addRemoveYaziElementiXPath = driver.findElement(By.xpath("//h2")); //xpath haline getirilmis
 

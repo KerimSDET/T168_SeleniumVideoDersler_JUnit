@@ -26,7 +26,7 @@ public class C01_AramaTesti {
 
         WebElement aramaKutusu = driver.findElement(By.id("global-search"));
 
-                /*
+        /*
         kodlariniz ile reel browser'daki bir webelementi kullanabilmek icin
         once o webelementi kodlarimizla tanimlayip
         bir obje olarak class'da kaydetmeliyiz.
