@@ -1,8 +1,6 @@
 package tests.K06_JUnitFrameWork.D02_Annotations;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -42,23 +40,25 @@ public class C04_BeforeAll_AfterAll {
         mutlaka static olmasi gerekir
      */
 
-    WebDriver driver;
+    static WebDriver driver;
 
-    @BeforeEach
-    public void setup (){
+    @BeforeAll
+    public static void setup (){
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
-    @AfterEach
-    public void teardown (){
+    @AfterAll
+    public static void teardown (){
         ReuseableMethods.bekle(1);
         driver.quit();
     }
 
+    //Testin sorunsuz calismasi icin sirali test yapilmasi gerekir
+
     @Test
-    public void testOtomasyonuUrlTesti (){
+    public void test01(){
         // 1- Test otomasyonu anasayfaya gidin
         //    Url'in testotomasyonu icerdigini test edin
 
@@ -75,13 +75,35 @@ public class C04_BeforeAll_AfterAll {
     }
 
     @Test
-    public void phoneAramaTesti (){
+    public void test02(){
         WebElement aramaKutusu = driver.findElement(By.id("global-search"));
         aramaKutusu.sendKeys("phone"+ Keys.ENTER);
 
-        List<WebElement> bulunanUrunElementList = driver.findElements(By.xpath("//*[@class='prod-img]"));
+        List<WebElement> bulunanUrunElementList = driver.findElements(By.xpath("//*[@class='prod-img']"));
 
-        int actuakSonucSayisi = bulunanUrunElementList.size();
+        int actualSonucSayisi = bulunanUrunElementList.size();
 
+        if (actualSonucSayisi >0){
+            System.out.println("Phone arama testi PASSED");
+        } else System.out.println("Phone arama testi FAILED");
+
+
+    }
+
+    // 3- ilk urunu tiklayin
+    //    ve acilan sayfadaki urun isminde case sensitive olmadan "phone" bulundugunu test edin
+
+    @Test
+    public void test03(){
+        driver.findElement(By.xpath("(//*[@class='prod-img'])[1]")).click();
+
+        WebElement ilkUrunIsımElementi = driver.findElement(By.xpath("//*[@class=' heading-sm mb-4']"));
+
+        String expectedIsınIcerik = "phone";
+        String actualIsim = ilkUrunIsımElementi.getText().toLowerCase(); //case sensitive olmamasi icin
+
+        if (actualIsim.contains(expectedIsınIcerik)){
+            System.out.println("Urun isim testi PASSED");
+        } else System.out.println("Urun isim testi FAILED");
     }
 }
