@@ -54,7 +54,7 @@ public class C01_IFrame extends TestBase_Each {
         //4) sayfadaki iframe sayısını yazdirin.
 
         List<WebElement> iframeListesi = driver.findElements(By.tagName("iframe"));
-        System.out.println(iframeListesi.size());
+        System.out.println("Sayfadaki iframe sayisi : " +iframeListesi.size());
 
     }
 }

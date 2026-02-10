@@ -35,19 +35,20 @@ public class C02_DropdownMenu extends TestBase_Each {
         Select selectGunDdm = new Select(ddmGun);
 
         //olusturulan selenctGunDdm objesi sayesinde select hazir methodlariyla istenilen islemleri yap
-        selectGunDdm.selectByIndex(5);
+        selectGunDdm.selectByIndex(2);
 
 
 
         //2. Dogum tarihi ay seçeneğinden value kullanarak Nisan’i secin
         WebElement ddmAy = driver.findElement(By.xpath("(//select[@class='form-control'])[2]"));
         Select selectAyDdm = new Select(ddmAy);
-        selectAyDdm.selectByIndex(4);
+        selectAyDdm.selectByIndex(11);
 
         //3. Dogum tarihi yil seçeneğinden visible text kullanarak 1990’i secin
         WebElement ddmYil = driver.findElement(By.xpath("(//select[@class='form-control'])[3]"));
         Select selectYilDdm = new Select(ddmYil);
-        selectYilDdm.selectByVisibleText("1990");
+        selectYilDdm.selectByVisibleText("1983");
+        ReuseableMethods.bekle(2);
 
 
         //4. Secilen değerleri konsolda yazdirin
