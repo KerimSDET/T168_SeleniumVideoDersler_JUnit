@@ -1,4 +1,4 @@
-package week03_fileTestleri;
+package tests.week03_fileTestleri;
 
 public class C01_FakerClassKullnaimi {
 
