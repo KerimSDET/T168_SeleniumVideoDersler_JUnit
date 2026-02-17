@@ -12,4 +12,5 @@ public class WebDriverTest {
         driver.get("https://www.google.com");
         driver.quit();
     }
+
 }
